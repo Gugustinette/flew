@@ -3,32 +3,33 @@ Flew, a discord-like application, but open source
 
 ## Lancement
 
-La configuration Docker permet de lancer l'application en mode développement ou en mode production, sans avoir à faire de configuration manuelle.
-En principe, les 4 services suivants sont lancés :
-- `flew-client` : l'interface web, utilisant Vue, Pinia, Axios et Socket.io
+Docker configuration is available so you can run the application with docker compose.
+In theory, you can run the application without docker, but it's not recommended.
+Here are the 4 services that compose the application :
+- `flew-client` : the user interface, using Vue, Pinia, Socket.io and Axios
     - Port : 7760
-    - Donc accessible à l'adresse [http://localhost:7760](http://localhost:7760)
-- `flew-server` : le serveur, utilisant Express, Socket.io et Mongoose
+    - Accessible at [http://localhost:7760](http://localhost:7760)
+- `flew-server` : the server, using Express, Socket.io and Mongoose
     - Port : 7761
-- `flew-gateway` : le serveur de websocket, utilisant Socket.io
+- `flew-gateway` : the websocket gateway, using Socket.io
     - Port : 7762
-- `flew-db` : la base de données MongoDB
+- `flew-db` : the database, using MongoDB
     - Port : 27017
 
-En mode développement :
+In development mode :
 ```bash
 docker compose -f docker/dev/docker-compose.yml up -d
 ```
 
-En mode production :
+In production mode :
 ```bash
 docker compose -f docker/prod/docker-compose.yml up -d
 ```
 
-Si de nouvelles dépendances sont ajoutées, il faut rebuild les images en lançant avec l'option `--build` :
+If new dependencies were added, you'll need to rebuild the images with the `--build` option :
 ```bash
-# En mode développement :
+# In development mode :
 docker compose -f docker/dev/docker-compose.yml up -d --build
-# En mode production :
+# In production mode :
 docker compose -f docker/prod/docker-compose.yml up -d --build
 ```
