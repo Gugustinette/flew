@@ -29,7 +29,7 @@ export default defineComponent({
       flewStore,
     };
   },
-  name: "ContextRoom",
+  name: "flew-context-room",
   extends: ContextMenu,
   props: {
     room: {

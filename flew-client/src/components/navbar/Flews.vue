@@ -37,7 +37,7 @@ export default defineComponent({
       flewStore,
     };
   },
-  name: "Flews",
+  name: "flew-flews",
   components: {
     Flew,
     ContextFlew,

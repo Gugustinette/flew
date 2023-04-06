@@ -15,7 +15,7 @@ import { defineComponent } from "vue";
 import Button from "@/components/form/Button.vue";
 
 export default defineComponent({
-  name: "CreationConfirm",
+  name: "flew-creation-confirm",
   components: {
     Button,
   },

@@ -32,7 +32,7 @@ export default defineComponent({
       globalStore,
     };
   },
-  name: "ContextFlew",
+  name: "flew-context-flew",
   extends: ContextMenu,
   props: {
     flew: {

@@ -14,7 +14,7 @@
 import { defineComponent } from "vue";
 
 export default defineComponent({
-  name: "Button",
+  name: "flew-button",
   props: {
     content: String,
     colorOnHover: Boolean,

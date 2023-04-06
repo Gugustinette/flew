@@ -47,7 +47,7 @@ export default defineComponent({
       userStore,
     };
   },
-  name: "Login",
+  name: "view-login",
   components: {
     TextField,
     Button,

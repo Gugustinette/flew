@@ -14,7 +14,7 @@
 import { defineComponent } from "vue";
 
 export default defineComponent({
-  name: "TextField",
+  name: "flew-text-field",
   props: {
     name: String,
     modelValue: String,

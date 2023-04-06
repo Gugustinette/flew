@@ -21,7 +21,7 @@ import AddFlewButton from "@/components/navbar/AddFlewButton.vue";
 import Settings from "@/components/navbar/Settings.vue";
 
 export default defineComponent({
-  name: "Navbar",
+  name: "flew-navbar",
   components: {
     Profile,
     Flews,

@@ -61,7 +61,7 @@ export default defineComponent({
       socket,
     };
   },
-  name: "MessagePanel",
+  name: "view-message-panel",
   components: {
     MessagePanelTop,
     Message,

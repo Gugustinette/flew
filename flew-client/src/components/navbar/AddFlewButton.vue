@@ -17,7 +17,7 @@
 import { defineComponent } from "vue";
 
 export default defineComponent({
-  name: "Flew",
+  name: "flew-add-flew-button",
 });
 </script>
 

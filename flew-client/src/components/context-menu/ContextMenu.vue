@@ -6,7 +6,7 @@
 import { defineComponent } from "vue";
 
 export default defineComponent({
-  name: "ContextMenu",
+  name: "flew-context-menu",
   props: {
     mousePos: {
       type: Object as () => { x: number; y: number },

@@ -1,0 +1,14 @@
+version: '3'
+
+services:
+  flew-client:
+    build:
+      context: ../../flew-client
+      dockerfile: ./env/dev/Dockerfile
+    env_file:
+      - ../../flew-client/env/dev/.dev.env
+    container_name: flew-client-dev
+    ports:
+      - "7760:7760"
+    volumes:
+      - ../../flew-client/src:/app/src

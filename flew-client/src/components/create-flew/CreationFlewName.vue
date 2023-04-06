@@ -23,7 +23,7 @@ import TextField from "@/components/form/TextField.vue";
 import Button from "@/components/form/Button.vue";
 
 export default defineComponent({
-  name: "CreationFlewName",
+  name: "flew-creation-flew-name",
   components: {
     TextField,
     Button,

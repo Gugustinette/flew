@@ -52,7 +52,7 @@ export default defineComponent({
       userStore,
     };
   },
-  name: "SignUp",
+  name: "view-signup",
   components: {
     TextField,
     Button,

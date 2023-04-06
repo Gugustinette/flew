@@ -20,7 +20,7 @@ export default defineComponent({
       userStore,
     };
   },
-  name: "Home",
+  name: "view-home",
   methods: {
     logout() {
       this.userStore.logout();

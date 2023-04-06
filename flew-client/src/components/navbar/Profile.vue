@@ -13,7 +13,7 @@
 import { defineComponent } from "vue";
 
 export default defineComponent({
-  name: "Profile",
+  name: "flew-profile",
   props: {
     imageSource: String,
   },

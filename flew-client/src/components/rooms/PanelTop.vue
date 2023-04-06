@@ -40,7 +40,7 @@ export default defineComponent({
       globalStore,
     };
   },
-  name: "PanelTop",
+  name: "flew-panel-top",
   props: {
     flew: Object as () => IFlew,
   },

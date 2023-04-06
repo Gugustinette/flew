@@ -27,7 +27,7 @@ export default defineComponent({
       flewStore,
     };
   },
-  name: "Room",
+  name: "flew-room",
   props: {
     category: Object as () => ICategory,
     room: Object as () => IRoom,

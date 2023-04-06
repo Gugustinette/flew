@@ -33,7 +33,7 @@ export default defineComponent({
       userStore,
     };
   },
-  name: "CreateCategoryView",
+  name: "view-create-category",
   components: {
     ModalPanel,
   },

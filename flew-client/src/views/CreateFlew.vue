@@ -43,7 +43,7 @@ export default defineComponent({
       userStore,
     };
   },
-  name: "CreateFlewView",
+  name: "view-create-flew",
   components: {
     CreationProcess,
     CreationFlewName,

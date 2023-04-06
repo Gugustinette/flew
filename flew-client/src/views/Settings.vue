@@ -32,7 +32,7 @@ export default defineComponent({
       globalStore,
     };
   },
-  name: "SettingsView",
+  name: "view-settings",
   components: {
     SettingsNavbar,
     SettingsPanel,

@@ -50,7 +50,7 @@ export default defineComponent({
       flewStore,
     };
   },
-  name: "Flew",
+  name: "flew-flew",
   props: {
     flew: Object as () => IFlew,
     currentFlew: Object as () => IFlew,

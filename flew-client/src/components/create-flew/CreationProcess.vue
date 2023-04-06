@@ -13,7 +13,7 @@
 import { defineComponent } from "vue";
 
 export default defineComponent({
-  name: "CreationProcess",
+  name: "flew-creation-process",
   methods: {
     QuickCreation() {
       // Emit event to go to next step

@@ -1,0 +1,12 @@
+version: '3'
+
+services:
+  flew-client:
+    build:
+      context: ../../flew-client
+      dockerfile: ./env/prod/Dockerfile
+    env_file:
+      - ../../flew-client/env/prod/.prod.env
+    container_name: flew-client-prod
+    ports:
+      - "7760:7760"

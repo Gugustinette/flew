@@ -29,7 +29,7 @@ export default defineComponent({
       userStore,
     };
   },
-  name: "ContextCategory",
+  name: "flew-context-category",
   extends: ContextMenu,
   props: {
     category: {

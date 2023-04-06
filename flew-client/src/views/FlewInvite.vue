@@ -14,7 +14,7 @@ export default defineComponent({
       flewStore,
     };
   },
-  name: "FlewInvite",
+  name: "view-flew-invite",
   mounted() {
     // Get the token from URL
     const token = this.$route.query.token as string;

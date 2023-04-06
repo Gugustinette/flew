@@ -51,7 +51,7 @@ export default defineComponent({
       globalStore,
     };
   },
-  name: "RoomPanel",
+  name: "flew-room-panel",
   props: {
     flew: {
       type: Object as () => IFlew,

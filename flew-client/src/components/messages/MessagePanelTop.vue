@@ -11,7 +11,7 @@ import { defineComponent } from "vue";
 import { IRoom } from "@/store/interfaces/Room";
 
 export default defineComponent({
-  name: "MessagePanel",
+  name: "flew-message-panel",
   props: {
     room: Object as () => IRoom,
   },

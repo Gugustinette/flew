@@ -40,7 +40,7 @@ export default defineComponent({
       socket,
     };
   },
-  name: "FlewView",
+  name: "view-flew",
   components: {
     RoomPanel,
   },

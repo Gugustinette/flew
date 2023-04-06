@@ -33,7 +33,7 @@ export default defineComponent({
       flewStore,
     };
   },
-  name: "CreateRoomView",
+  name: "view-create-room",
   components: {
     ModalPanel,
   },

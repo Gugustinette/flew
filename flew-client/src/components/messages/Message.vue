@@ -45,7 +45,7 @@ export default defineComponent({
       globalStore,
     };
   },
-  name: "Message",
+  name: "flew-message",
   props: {
     message: Object as () => IMessage,
     sameUser: Boolean,

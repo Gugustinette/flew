@@ -39,7 +39,7 @@ export default defineComponent({
       flewStore,
     };
   },
-  name: "Category",
+  name: "flew-category",
   props: {
     category: Object as () => ICategory,
     rooms: Array as () => IRoom[],

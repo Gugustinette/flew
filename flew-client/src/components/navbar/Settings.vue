@@ -18,7 +18,7 @@ export default defineComponent({
       globalStore,
     };
   },
-  name: "Settings",
+  name: "flew-settings",
   methods: {
     handleClick() {
       this.globalStore.toggleSettingsVisibility();

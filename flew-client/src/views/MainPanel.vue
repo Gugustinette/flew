@@ -41,7 +41,7 @@ export default defineComponent({
       userStore,
     };
   },
-  name: "MainPanel",
+  name: "view-main-panel",
   components: {
     Navbar,
     Settings,
