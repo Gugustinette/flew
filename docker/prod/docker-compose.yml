@@ -19,3 +19,23 @@ services:
     container_name: flew-server-prod
     ports:
       - "7761:7761"
+    links:
+      - "flew-gateway:flew-gateway"
+  # Flew Gateway
+  flew-gateway:
+    build:
+      context: ../../flew-gateway
+      dockerfile: ./env/prod/Dockerfile
+    env_file:
+      - ../../flew-gateway/env/prod/.prod.env
+    container_name: flew-gateway-prod
+    ports:
+      - "7762:7762"
+  # Flew Database
+  flew-db:
+    image: mongo:4.0.3
+    container_name: flew-db-dev
+    ports:
+      - "27017:27017"
+    volumes:
+      - ../../flew-db/data:/data/db

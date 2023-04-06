@@ -83,7 +83,7 @@ app.use(routeOrigin + '/message', messageRouter);
 expressJSDocSwagger(app)(options);
 
 // MongoDB Connection
-mongoose.connect('mongodb://localhost:27017/flew', {useUnifiedTopology: true, useNewUrlParser: true} as any);
+mongoose.connect('mongodb://flew-db:27017/flew', {useUnifiedTopology: true, useNewUrlParser: true} as any);
 
 
 

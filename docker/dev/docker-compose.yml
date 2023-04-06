@@ -1,6 +1,7 @@
 version: '3'
 
 services:
+  # Flew Client
   flew-client:
     build:
       context: ../../flew-client
@@ -12,6 +13,9 @@ services:
       - "7760:7760"
     volumes:
       - ../../flew-client/src:/app/src
+    depends_on:
+      - "flew-server"
+  # Flew Server
   flew-server:
     build:
       context: ../../flew-server
@@ -21,5 +25,47 @@ services:
     container_name: flew-server-dev
     ports:
       - "7761:7761"
+    links:
+      - "flew-db:flew-db"
+      - "flew-gateway:flew-gateway"
     volumes:
-      - ../../flew-server/src:/app/src
+      - ../../flew-server/gateway:/app/gateway
+      - ../../flew-server/controllers:/app/controllers
+      - ../../flew-server/models:/app/models
+      - ../../flew-server/routes:/app/routes
+      - ../../flew-server/strategies:/app/strategies
+      - ../../flew-server/types:/app/types
+      - ../../flew-server/documentation:/app/documentation
+      - ../../flew-server/app.ts:/app/app.ts
+      - ../../flew-server/tsconfig.json:/app/tsconfig.json
+      - ../../flew-server/bin:/app/bin
+    depends_on:
+      - "flew-db"
+      - "flew-gateway"
+  # Flew Gateway
+  flew-gateway:
+    build:
+      context: ../../flew-gateway
+      dockerfile: ./env/dev/Dockerfile
+    env_file:
+      - ../../flew-gateway/env/dev/.dev.env
+    container_name: flew-gateway-dev
+    ports:
+      - "7762:7762"
+    volumes:
+      - ../../flew-gateway/api:/app/api
+      - ../../flew-gateway/bin:/app/bin
+      - ../../flew-gateway/flew:/app/flew
+      - ../../flew-gateway/message:/app/message
+      - ../../flew-gateway/app.js:/app/app.js
+      - ../../flew-gateway/socket.js:/app/socket.js
+    depends_on:
+      - "flew-db"
+  # Flew Database
+  flew-db:
+    image: mongo:4.0.3
+    container_name: flew-db-dev
+    ports:
+      - "27017:27017"
+    volumes:
+      - ../../flew-db/data:/data/db
