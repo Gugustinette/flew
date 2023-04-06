@@ -10,3 +10,12 @@ services:
     container_name: flew-client-prod
     ports:
       - "7760:7760"
+  flew-server:
+    build:
+      context: ../../flew-server
+      dockerfile: ./env/prod/Dockerfile
+    env_file:
+      - ../../flew-server/env/prod/.prod.env
+    container_name: flew-server-prod
+    ports:
+      - "7761:7761"

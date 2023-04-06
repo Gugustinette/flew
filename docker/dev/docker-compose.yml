@@ -12,3 +12,14 @@ services:
       - "7760:7760"
     volumes:
       - ../../flew-client/src:/app/src
+  flew-server:
+    build:
+      context: ../../flew-server
+      dockerfile: ./env/dev/Dockerfile
+    env_file:
+      - ../../flew-server/env/dev/.dev.env
+    container_name: flew-server-dev
+    ports:
+      - "7761:7761"
+    volumes:
+      - ../../flew-server/src:/app/src
