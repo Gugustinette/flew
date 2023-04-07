@@ -101,7 +101,7 @@ h1 {
   width: calc(100% - 50px);
   border-radius: var(--border-radius);
   /* Background Image */
-  background: url("https://i.picsum.photos/id/1060/536/354.jpg?blur=2&hmac=0zJLs1ar00sBbW5Ahd_4zA6pgZqCVavwuHToO6VtcYY");
+  background: url("https://picsum.photos/id/237/200/300?blur=2&hmac=0zJLs1ar00sBbW5Ahd_4zA6pgZqCVavwuHToO6VtcYY");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
